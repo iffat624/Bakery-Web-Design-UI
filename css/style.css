@@ -1,0 +1,464 @@
+
+
+/* ---------------------
+
+Global CSS
+
+------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: 'Baloo Bhai 2', cursive;
+    scroll-behavior: smooth;
+}
+
+
+
+
+/* -------------------------
+
+CSS for navbar  
+
+---------------------------*/
+
+nav{
+    display: flex;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
+}
+
+nav .logo a img{
+    height: 4em;
+    margin: 10px 25px;
+}
+
+nav .nav-button ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    margin: 0px 50px;
+}
+
+nav .nav-button ul li{
+    margin: 10px;
+    border-bottom: 1px solid transparent;
+}
+
+nav .nav-button ul li:hover{
+    border-bottom: 1px solid white;
+}
+
+nav .nav-button ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+}
+
+@media (max-width:530px){
+    nav .nav-button ul{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style: none;
+        margin: 0px 0px;
+    }
+
+    nav .nav-button ul li a{
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: small;
+    }
+    
+    nav .logo a img{
+        height: 3em;
+        margin: 10px 25px;
+    }
+
+
+}
+
+
+@media (max-width: 345px){
+    nav{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/* -------------------------
+
+CSS for hero  
+
+---------------------------*/
+
+.hero{
+    background: url("../img/hero.jpg") no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    height: 600px;
+    z-index: -1;
+}
+
+.hero .hero-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .hero-items h2, .hero .hero-items h1{
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgb(248, 247, 247), -1px -1px 2px white;
+}
+
+.hero .hero-items h1 span{
+    color: rgb(251, 252, 248);
+    text-shadow: 1px 1px 2px black, -1px -1px 2px black;
+    font-family: cursive;
+    font-size: larger;
+}
+
+.hero .hero-items button{
+    cursor: pointer;
+    background:transparent;
+    border-radius: 10px;
+    border: 3px solid white;
+    color: white;
+    font-size: 20px;
+    padding: 5px  15px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.hero .hero-items button:hover{
+    background: white;
+    color: rgb(0, 0, 0);
+}
+
+@media (max-width: 600px){
+    .hero .hero-items h2, .hero .hero-items h1{
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgb(248, 247, 247), -1px -1px 2px white;
+    }
+}
+
+
+@media (max-width: 505px){
+    .hero .hero-items h2, .hero .hero-items h1{
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgb(248, 247, 247), -1px -1px 2px white;
+    }
+}
+
+
+
+
+
+/* --------------------------
+
+about section css
+
+------------------------------*/
+
+
+
+
+#about h1{
+
+    font-size: 70px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+#about .card-panel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#about .card-panel .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid rgb(66, 28, 3);
+    border-radius: 10px;
+    width: 20%;
+    margin: 30px 30px;
+    padding: 40px 20px;
+    background: rgb(243, 243, 240);
+}
+
+#about .card-panel .card img{
+    height: 170px;
+    margin: 15px auto;
+}
+
+#about .card-panel .card p{
+    text-align: center;
+}
+
+
+@media (max-width: 1422px) and (min-width: 984px){
+
+    #about .card-panel .card img{
+        height: 120px;
+        margin: 15px auto;
+    }
+
+}
+
+
+@media (max-width: 984px) and (min-width: 715px) {
+
+    #about .card-panel .card img{
+        height: 100px;
+        margin: 15px auto;
+    }
+
+    #about .card-panel .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 3px solid rgb(66, 28, 3);
+        border-radius: 10px;
+        width: 25%;
+        margin: 30px 7px;
+        padding: 40px 20px;
+        background: rgb(243, 243, 240);
+    }
+
+}
+
+
+@media (max-width: 715px) {
+
+    #about .card-panel .card img{
+        height: 100px;
+        margin: 15px auto;
+    }
+
+    #about .card-panel .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 3px solid rgb(66, 28, 3);
+        border-radius: 10px;
+        width: 36%;
+        margin: 30px 7px;
+        padding: 40px 20px;
+        background: rgb(243, 243, 240);
+    }
+
+}
+@media (max-width: 445px){
+
+    #about .card-panel .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 3px solid rgb(66, 28, 3);
+        border-radius: 10px;
+        width: 58%;
+        margin: 30px 30px;
+        padding: 40px 20px;
+        background: rgb(243, 243, 240);
+    }
+}
+/* --------------------------
+
+service section css
+
+------------------------------*/
+
+#service{
+    background: rgba(75, 36, 1, 0.205);
+
+}
+
+#service h1{
+    font-size: 60px;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-weight: bold;
+
+}
+
+
+#service .service-panel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+
+#service .service-panel img{
+    height: 120px;
+    margin: 20px 60px;
+    padding: auto;
+}
+
+
+@media (max-width: 644px){
+    #service .service-panel img{
+        height: 80px;
+        margin: 20px 60px;
+        padding: auto;
+    }
+
+}
+
+@media (max-width: 493px){
+    #service .service-panel img{
+        height: 60px;
+        margin: 20px 30px;
+        padding: auto;
+    }
+
+
+}
+/* ---------------------------------
+
+contact css strt
+
+-----------------------------------*/
+
+
+#contact h1{
+
+    font-size: 60px;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+
+#contact form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    padding: 30px 20px;
+    border: 0.5px solid rgb(180, 179, 179);
+    border-radius: 10px;
+    flex-direction: column;
+    width: 30%;
+    background: #cadaeb;
+}
+
+
+#contact form input{
+    border: 2px solid black;
+    border-radius: 50px;
+    margin: 10px;
+    padding: 8px;
+    width: 70%;
+
+
+}
+
+
+#contact form textarea{
+
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 8px;
+    width: 70%;
+    resize: none;
+    height: 100px;
+}
+
+
+#contact form button{
+    color: #6794c4;
+    border: 3px solid #6794c4;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    background: transparent;
+    padding: 5px 25px;
+    margin: 10px auto;
+}
+
+
+#contact form button:hover{
+    background: #6794c4;
+    box-shadow: 1px 1px 2px 2px white, -1px -1px 2px 2px white;
+    color: white;
+}
+
+@media (max-width: 955px){
+    #contact form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px auto;
+        padding: 30px 20px;
+        border: 0.5px solid rgb(180, 179, 179);
+        border-radius: 10px;
+        flex-direction: column;
+        width: 59%;
+        background: #cadaeb;
+    }
+}
+
+@media (max-width: 450px){
+    #contact form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px auto;
+        padding: 30px 20px;
+        border: 0.5px solid rgb(180, 179, 179);
+        border-radius: 10px;
+        flex-direction: column;
+        width: 80%;
+        background: #cadaeb;
+    }
+}
+
+
+footer{
+    background: rgb(49, 49, 49);
+    padding: 20px;
+    margin-top:90px;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+}
+
